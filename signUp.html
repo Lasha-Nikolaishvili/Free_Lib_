@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free_Lib_ - Sign Up</title>
+    <link rel="stylesheet" href="./Styles/Repeated Styles/nav.css">
+    <link rel="stylesheet" href="./Styles/Repeated Styles/footer.css">
+    <link rel="stylesheet" href="./Styles/Repeated Styles/utilityClasses.css">
+    <link rel="stylesheet" href="./Styles/SignUp/signUp.css">
+</head>
+
+<body>
+    <nav>
+        <a class="logo" href="./home.html">Free_Lib_</a>
+        <ul class="nav-ul">
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./fiction.html">Fiction</a></li>
+            <li><a href="./non-fiction.html">NoN-Fiction</a></li>
+            <li><a href="./signIn.html">Sign-In</a></li>
+        </ul>
+        <input class="nav-search-bar" type="text" placeholder="search...">
+        <div class="ham-btn">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </nav>
+    <main>
+        <div class="main-card">
+            <h1>Sign Up</h1>
+            <p>Already have an account? <a class="anchor" href="./signIn.html">Log In</a></p>
+            <form action="#">
+                <label class="text-inp-labl" for="login">Email Address</label><br>
+                <input type="email" name="login" id="login" placeholder="myMail@example.com"><br>
+                <label class="text-inp-labl" for="pass">Password</label><br>
+                <input minlength="8" maxlength="20" type="password" name="pass" id="pass" placeholder="Enter 8 characters or more"><br>
+                <label class="text-inp-labl" for="pass">Confirm Password</label><br>
+                <input minlength="8" maxlength="20" type="password" name="pass" id="pass" placeholder="Repeat password"><br>
+                <input type="checkbox" name="RemMe" id="RemMe">
+                <label for="RemMe">Remember me</label><br>
+                <input type="checkbox" name="mailPerm" id="mailPerm">
+                <label for="mailPerm">I agree to recieve updates from <a class="anchor" href="./home.html" target="_blank">Free_Lib_</a></label>
+                <button class="sign-up-btn">Sign Up</button>
+                <hr class="hr">
+                <p class="terms-p">By creating an account, you agree to our <a class="anchor" href="">Terms</a> and have read and acknowledged the <a class="anchor" href="">Global Privacy Statement.</a></p>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <ul class="sim-web-ul"><span class="head">Similar Websites</span>
+            <li><a href="https://openlibrary.org/">Open Library</a></li>
+            <li><a href="https://archive.org/">Internet Archive</a></li>
+            <li><a href="https://www.gutenberg.org/">Project Gutenberg</a></li>
+            <li><a href="http://onlinebooks.library.upenn.edu/">The Online Books Page</a></li>
+        </ul>
+
+        <ul class="sim-web-ul"><span class="head">Contact Us</span>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Telegram</a></li>
+            <li class="">Gmail: Free_Lib_Mail@gmail.com</li>
+        </ul>
+
+        <div class="sug-div-parent">
+            <span class="head">Help Us Improve</span>
+            <div class="sug-div">
+                <p>Send us a suggestion?</p>
+                <textarea name="" id="" cols="30" rows="5" placeholder="Write a suggestion!"></textarea>
+                <br><button class="sug-btn">Send</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./Scripts/hamBtn.js"></script>
+</body>

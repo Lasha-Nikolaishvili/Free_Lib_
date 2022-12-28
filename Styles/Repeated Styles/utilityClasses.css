@@ -1,0 +1,31 @@
+.underline {
+    text-decoration: underline;
+}
+
+.col-yellow {
+    color: yellow;
+}
+
+.col-blue {
+    color: #2699fb;
+}
+
+.col-white {
+    color: white;
+}
+
+.anchor {
+    color: #2699fb;
+    text-decoration: none;
+}
+
+.anchor:hover {
+    text-decoration: underline;
+}
+
+/* Colors for later: 
+Nav: 
+nav-color: #161617
+body-color: #27292d
+text-color: #fff
+text-color on hover: #2699fb */
