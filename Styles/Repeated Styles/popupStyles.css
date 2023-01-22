@@ -1,0 +1,164 @@
+.popup-container {
+  display: block;
+}
+
+.popup-container.deactivate {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.popup-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #27292d;
+  border: 3px solid #2699fb;
+  border-radius: 5px;
+  width: 600px;
+  height: fit-content;
+  padding: 1em;
+  z-index: 2;
+}
+
+.close-btn {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 30px;
+  height: 30px;
+  background: #27292d;
+  color: #2699fb;
+  border: 1px solid #2699fb;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #161617;
+  background: #2699fb;
+  transition: 0.3s ease-in-out;
+}
+
+.main-content {
+  display: flex;
+}
+
+.book-img {
+  height: 306px;
+  width: 240px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.header {
+  color: #fff;
+  margin: 5px;
+}
+
+.info-and-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px 5px 5px 5px;
+  flex-grow: 1;
+}
+
+.btns-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.down-type-btn {
+  background-color: #323235;
+  color: #2699fb;
+  font-weight: bold;
+  border: 1px solid #2699fb;
+  border-radius: 5px;
+  height: 3.5em;
+  width: 48%;
+  margin: 5px 5px 0px 0px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+}
+
+.down-type-btn:first-of-type {
+  background-image: url("./Svgs/epub-svgrepo-com-blue.svg");
+}
+
+.down-type-btn:first-of-type:hover {
+  background-image: url("./Svgs/epub-svgrepo-com-black.svg");
+}
+
+.down-type-btn:last-of-type {
+  background-image: url("./Svgs/pdf-document-svgrepo-com-blue.svg");
+}
+
+.down-type-btn:last-of-type:hover {
+  background-image: url("./Svgs/pdf-document-svgrepo-com-black.svg");
+}
+
+.down-type-btn:hover {
+  background-color: #2699fb;
+  color: #161617;
+  transition: 0.3s ease-in-out;
+}
+
+.title {
+  color: white;
+  font-size: 1.2em;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.author {
+  color: rgb(187, 179, 179);
+}
+
+@media (max-width: 650px) {
+  .popup-window {
+    width: 500px;
+  }
+
+  .down-type-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .popup-window {
+    width: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .popup-window {
+    width: 300px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .popup-window {
+    width: 220px;
+  }
+}

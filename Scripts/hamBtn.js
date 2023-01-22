@@ -1,33 +1,23 @@
 const hamBtn = document.querySelector('.ham-btn');
 const navLinks = document.querySelector('.nav-ul');
+const mainContent = document.querySelector('main');
 const hamBtnLines = document.querySelectorAll('.line');
 let hamBtnRotated = false;
-// hamBtn.style.animationFillMode = 'forwards';
 
 hamBtn.addEventListener('click', function() {
-    // if(navLinks.style.display === 'flex') {
-    //     navLinks.style.display = 'none';
-    // }else {
-    //     navLinks.style.display = 'flex';
-    // }
+    hamBtn.style.animation = '';
+    navLinks.classList.toggle('active');
+    mainContent.classList.toggle('active');
+    for (const line of hamBtnLines) {
+        line.classList.toggle('active');
+        hamBtn.classList.toggle('active');
+    }
+
     if(!hamBtnRotated) {
-        hamBtn.style.animationName = 'rotateRight90';
-        hamBtn.style.animationDelay = '1s';
-        hamBtn.style.animationFillMode = 'forwards';
-        for (const line of hamBtnLines) {
-            line.style.background = '#2699fb';
-            line.style.transition = '1s';
-        }
+        hamBtn.style.animation = 'rotateRight360 1s forwards';
         hamBtnRotated = true;
     } else {
-        hamBtn.style.animationName = 'rotateLeft90';
-        hamBtn.style.animationDelay = '1s';
-        hamBtn.style.animationFillMode = 'forwards';
-        for (const line of hamBtnLines) {
-            line.style.background = '#fff';
-            line.style.transition = '1s';
-        }
+        hamBtn.style.animation = 'rotateLeft360 1s forwards';
         hamBtnRotated = false;
     }
-    
 });

@@ -1,103 +1,200 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #27292d;
+}
+
+body > * {
+  justify-self: stretch;
+}
+
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #161617;
-    height: 4em;
-    overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #161617;
+  height: 4em;
+  font-size: 1.2em;
 }
 
 .logo {
-    text-decoration: none;
-    color: white;
-    margin-left: 40px;
-    padding: .5em;
+  text-decoration: none;
+  color: white;
+  margin-left: 40px;
+  padding: 0.5em;
 }
 
 .logo:hover {
-    color: #2699fb;
-    transition: .3s;
+  color: #2699fb;
+  transition: 0.2s ease-in;
 }
 
-.nav-search-bar {
-    padding: .5em;
-    margin-right: 40px;
-    color: #2699fb;
-    background-color: black;
-    border: 1px solid white;
+.search-icon {
+  width: 40px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.search-icon:hover {
+  fill: #2699fb;
+  transition: 0.2s ease-in;
 }
 
 .nav-ul {
-    list-style-type: none;
-    margin: none;
-    padding: none;
-    display: flex;
-    justify-content: center;
-    margin-right: 40px;
+  list-style-type: none;
+  margin: none;
+  padding: none;
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
 }
 
-.nav-ul>li {
-    padding: .5em;
-    padding-left: 3em;
+.nav-ul > li {
+  padding: 0.5em;
+  padding-left: 3em;
 }
 
-.nav-ul>li>a {
-    text-decoration: none;
-    color: white;
+.nav-ul > li > a {
+  text-decoration: none;
+  color: white;
 }
 
-.nav-ul>li>a:hover {
-    color: #2699fb;
-    transition: .3s;
+.nav-ul > li > a:hover {
+  color: #2699fb;
+  transition: 0.3s;
 }
 
 .ham-btn {
-    border: 2px solid white;
-    height: 2em;
-    width: 2em;
-    margin-right: 1em;
-    border-radius: 5px;
-    display: none;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    cursor: pointer;
+  border: 2px solid white;
+  height: 2em;
+  width: 2em;
+  /* margin-right: 1em; */
+  border-radius: 5px;
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .ham-btn:hover {
-    border: 2px solid #2699fb;
-    transition: .3s;
+  border: 2px solid #2699fb;
+  transition: 0.3s;
 }
 
 .line {
-    height: 2px;
-    width: 1.2em;
-    border-radius: 5px;
-    background-color: white;
+  height: 2px;
+  width: 1.2em;
+  border-radius: 5px;
+  background-color: white;
 }
 
-@keyframes rotateRight90 {
-    100% {transform: rotate(90deg);}
+@keyframes rotateRight360 {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-@keyframes rotateLeft90 {
-    100% {
-        transform: rotate(-90deg);
-    }
+@keyframes rotateLeft360 {
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
-@media (max-width: 900px) {
-    .nav-search-bar {
-        display: none;
-    }
-}
+@media (max-width: 865px) {
+  nav {
+    position: relative;
+  }
 
-@media (max-width: 660px) {
-    .nav-ul {
-        display: none;
-    }
- 
-    .ham-btn {
-        display: flex;
-    }
+  main.active {
+    margin-top: 160px;
+  }
+
+  .nav-ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 3.5em;
+    background-color: #161617;
+    /* margin: 0; */
+    padding: 0;
+    width: 100%;
+  }
+
+  .nav-ul.active {
+    display: flex;
+  }
+
+  .nav-ul li {
+    /* justify-self: stretch; */
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    display: block;
+  }
+
+  .nav-ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0px;
+  }
+
+  .nav-ul li:hover {
+    background-color: #212122;
+    cursor: pointer;
+  }
+
+  .ham-btn {
+    display: flex;
+  }
+
+  .ham-btn.active {
+    border-color: #2699fb;
+    /* animation: rotateRight360 1s ease-out; */
+  }
+
+  .line.active {
+    background-color: #2699fb;
+  }
+
+  .search-icon,
+  .logo,
+  .ham-btn,
+  .nav-ul {
+    margin: 0;
+  }
+
+  .search-icon {
+    margin-top: 3px;
+    width: 33px;
+    order: 1;
+  }
+
+  .ham-btn {
+    width: 1.5em;
+    height: 1.5em;
+    order: 3;
+  }
+
+  .logo {
+    font-size: 1em;
+    order: 2;
+  }
+
+  .headline h1 {
+    padding: 36px;
+    margin: 0;
+    font-size: 2em;
+  }
+
+  nav {
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
