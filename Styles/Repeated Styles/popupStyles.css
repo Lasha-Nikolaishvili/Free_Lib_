@@ -45,12 +45,12 @@
   text-align: center;
   border-radius: 50%;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
 .close-btn:hover {
   color: #161617;
   background: #2699fb;
-  transition: 0.3s ease-in-out;
 }
 
 .main-content {
@@ -86,7 +86,7 @@
   background-color: #323235;
   color: #2699fb;
   font-weight: bold;
-  border: 1px solid #2699fb;
+  border: 2px solid #2699fb;
   border-radius: 5px;
   height: 3.5em;
   width: 48%;
@@ -95,6 +95,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 30px;
+  transition: 0.2s ease-in-out;
 }
 
 .down-type-btn:first-of-type {
@@ -116,7 +117,6 @@
 .down-type-btn:hover {
   background-color: #2699fb;
   color: #161617;
-  transition: 0.3s ease-in-out;
 }
 
 .title {

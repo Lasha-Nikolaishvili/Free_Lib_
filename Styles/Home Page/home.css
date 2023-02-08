@@ -73,7 +73,6 @@
 }
 
 .card-link:hover {
-  /* background-color: black; */
   animation: to-left-right 0.3s ease-in forwards;
 }
 

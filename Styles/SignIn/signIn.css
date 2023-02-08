@@ -70,7 +70,6 @@ form {
 .pass-wrapper {
   width: 85%;
   white-space: nowrap;
-  /* padding-right: 1em; */
 }
 
 .toggle-password {
@@ -92,10 +91,10 @@ form {
   border: 1px solid #2699fb;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .login-btn:hover {
-  transition: 0.5s;
   background-color: #2699fb;
   color: #161617;
   font-weight: 700;

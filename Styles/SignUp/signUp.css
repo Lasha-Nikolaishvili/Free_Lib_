@@ -72,10 +72,10 @@ form {
   border: 1px solid #2699fb;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .sign-up-btn:hover {
-  transition: 0.5s;
   background-color: #2699fb;
   color: #161617;
   font-weight: 700;
