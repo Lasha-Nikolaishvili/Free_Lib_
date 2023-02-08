@@ -40,7 +40,7 @@ try {
                                 const epubBtn = document.createElement('button');
                                 const pdfBtn = document.createElement('button');
             
-            document.querySelector('body').append(popupContainer);
+            document.querySelector('main').append(popupContainer);
             popupContainer.append(overlay);
             popupContainer.append(popupWindow);
             popupWindow.append(closeBtn);
@@ -82,7 +82,7 @@ try {
             closeBtn.addEventListener('click', togglePopup);
             overlay.addEventListener('click', togglePopup);
             function togglePopup() {
-                popupContainer.classList.toggle('deactivate');
+                popupContainer.remove();
             };
         });
         function toggleDownloadDivMouseEnter() {
@@ -91,7 +91,6 @@ try {
         }
         function toggleDownloadDivMouseLeave() {
             downloadDiv.style.animation = "slide-down .5s ease-in-out forwards";
-            // downloadDiv.classList.toggle('active');
         }
     }
 } catch (e) {

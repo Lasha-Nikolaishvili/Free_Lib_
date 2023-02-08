@@ -2,10 +2,6 @@
   display: block;
 }
 
-.popup-container.deactivate {
-  display: none;
-}
-
 .overlay {
   position: fixed;
   top: 0px;
