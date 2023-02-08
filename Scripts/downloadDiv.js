@@ -4,25 +4,25 @@ try {
         const titleName = cards[i].children[1].innerText;
         const authorName = cards[i].children[2].innerText;
     
-        const dowloadDiv = document.createElement('div');
+        const downloadDiv = document.createElement('div');
         const title = document.createElement('p');
         const author = document.createElement('span');
         const downBtn = document.createElement('button');
         title.append(titleName);
         author.append(authorName);
         downBtn.innerText = "Download";
-        dowloadDiv.classList.add('download-div');
+        downloadDiv.classList.add('download-div');
         title.classList.add('title');
         author.classList.add('author');
         downBtn.classList.add('down-btn');
-        dowloadDiv.append(title);
-        dowloadDiv.append(author);
-        dowloadDiv.append(downBtn);
-        dowloadDiv.style.animation = "slide-up .4s ease-in-out forwards";
-        cards[i].append(dowloadDiv);
+        downloadDiv.append(title);
+        downloadDiv.append(author);
+        downloadDiv.append(downBtn);
+        downloadDiv.style.animation = "slide-up .4s ease-in-out forwards";
+        cards[i].append(downloadDiv);
 
-        cards[i].addEventListener('mouseenter', toggleDowloadDiv);
-        cards[i].addEventListener('mouseleave', toggleDowloadDiv);
+        cards[i].addEventListener('mouseenter', toggleDownloadDivMouseEnter);
+        cards[i].addEventListener('mouseleave', toggleDownloadDivMouseLeave);
 
         downBtn.addEventListener('click', function() {
             const popupContainer = document.createElement('div');
@@ -85,10 +85,14 @@ try {
                 popupContainer.classList.toggle('deactivate');
             };
         });
-        function toggleDowloadDiv() {
-            dowloadDiv.classList.toggle('active');
+        function toggleDownloadDivMouseEnter() {
+            if(!downloadDiv.classList.contains('active')) downloadDiv.classList.toggle('active');
+            downloadDiv.style.animation = "slide-up .4s ease-in-out forwards";
         }
-        
+        function toggleDownloadDivMouseLeave() {
+            downloadDiv.style.animation = "slide-down .5s ease-in-out forwards";
+            // downloadDiv.classList.toggle('active');
+        }
     }
 } catch (e) {
     console.log(e);
