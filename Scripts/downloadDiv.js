@@ -55,14 +55,6 @@ try {
             btnsContainer.append(epubBtn);
             btnsContainer.append(pdfBtn);
 
-            // Applying content
-            header.innerText = "Download book file";
-            closeBtn.innerHTML = '&times;';
-            bookImg.src = cards[i].children[0].src;
-            infoTitle.innerText = title.innerText;
-            infoAuthor.innerText = author.innerText;
-            epubBtn.title = 'Epub';
-            pdfBtn.title = 'PDF';
             // Applying styles
             popupContainer.classList.add('popup-container');
             overlay.classList.add('overlay');
@@ -78,7 +70,17 @@ try {
             epubBtn.classList.add('down-type-btn');
             pdfBtn.classList.add('down-type-btn');
 
+            // Applying content
+            header.innerText = "Download book file";
+            closeBtn.innerHTML = '&times;';
+            bookImg.src = cards[i].children[0].src;
+            infoTitle.innerText = title.innerText;
+            infoAuthor.innerText = author.innerText;
+            epubBtn.title = 'Epub';
+            pdfBtn.title = 'PDF';
+
             closeBtn.addEventListener('click', togglePopup);
+            overlay.addEventListener('click', togglePopup);
             function togglePopup() {
                 popupContainer.classList.toggle('deactivate');
             };
@@ -88,7 +90,6 @@ try {
         }
         
     }
-    
 } catch (e) {
     console.log(e);
 }
