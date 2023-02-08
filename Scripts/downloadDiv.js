@@ -79,10 +79,17 @@ try {
             epubBtn.title = 'Epub';
             pdfBtn.title = 'PDF';
 
+            popupWindow.classList.add('active');
+            overlay.classList.add('active');
+
             closeBtn.addEventListener('click', togglePopup);
             overlay.addEventListener('click', togglePopup);
             function togglePopup() {
-                popupContainer.remove();
+                popupWindow.classList.remove('active');
+                overlay.classList.remove('active');
+                setTimeout(() => {
+                    popupContainer.remove();
+                }, 200);
             };
         });
         function toggleDownloadDivMouseEnter() {
