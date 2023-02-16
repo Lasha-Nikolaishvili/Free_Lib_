@@ -9,8 +9,10 @@ body {
   background-color: #27292d;
 }
 
-body > * {
-  justify-self: stretch;
+input, select, textarea, button{font-family:inherit;}
+
+main {
+  flex-grow: 1;
 }
 
 nav {

@@ -54,15 +54,22 @@ footer {
   line-height: 1.8em;
 }
 
-.sug-div > textarea {
+textarea {
   background-color: #161617;
   color: #2699fb;
   border-radius: 5px;
   border: 1px solid #2699fb;
+  transition:.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+textarea:focus {
+  /* border: none; */
+  outline: #2699fb solid 2px;
 }
 
 .sug-btn {
-  border: 1px solid #2699fb;
+  border: 2px solid #2699fb;
+  font-weight: 700;
   width: 10em;
   height: 3em;
   background-color: #161617;

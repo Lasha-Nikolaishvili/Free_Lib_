@@ -85,20 +85,20 @@ form {
 
 .login-btn {
   width: 100%;
-  padding: 1.3em;
+  padding: 1em;
   color: #2699fb;
   background-color: #212122;
-  border: 1px solid #2699fb;
+  border: 2px solid #2699fb;
+  font-size: 1.00005em;
   border-radius: 5px;
+  font-weight: 700;
   cursor: pointer;
-  transition: 0.5s;
+  transition:1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .login-btn:hover {
   background-color: #2699fb;
   color: #161617;
-  font-weight: 700;
-  font-size: large;
 }
 
 @media (max-width: 650px) {
